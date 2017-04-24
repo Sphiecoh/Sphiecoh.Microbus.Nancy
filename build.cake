@@ -45,7 +45,7 @@ Task("Pack")
     };
      if(!isLocalBuild)
     {
-        settings.VersionSuffix = "build" + AppVeyor.Environment.Build.Number.ToString().PadLeft(5,'0');
+        settings.VersionSuffix = "build" + AppVeyor.Environment.Build.Number.ToString().PadLeft(3,'0');
     }
    var projects = GetFiles("./src/**/*.csproj");
     foreach(var project in projects)
