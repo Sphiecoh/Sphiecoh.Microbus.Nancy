@@ -3,7 +3,9 @@
   <PropertyGroup>
     <TargetFramework>netstandard1.6</TargetFramework>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>0.0.1</Version>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <VersionSuffix>preview</VersionSuffix>
+    <VersionSuffix Condition="'$(VersionSuffix)'!='' AND '$(APPVEYOR_BUILD_NUMBER)' != ''">$(VersionSuffix)-00$(APPVEYOR_BUILD_NUMBER)</VersionSuffix>
     <Description>Integrating Microbus mediator with Nancy</Description>
     <AssemblyName>Sphiecoh.Microbus.Nancy</AssemblyName>
     <RootNamespace>Sphiecoh.Microbus.Nancy</RootNamespace>
