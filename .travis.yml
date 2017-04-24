@@ -1,4 +1,17 @@
 language: csharp
+mono: alpha
+sudo: required
+dist: trusty
+addons:
+  apt:
+    packages:
+    - gettext
+    - libcurl4-openssl-dev
+    - libicu-dev
+    - libssl-dev
+    - libunwind8
+env:
+    - MONO_TLS_PROVIDER=legacy
 script: 
     - chmod +x build.sh
     - ./build.sh

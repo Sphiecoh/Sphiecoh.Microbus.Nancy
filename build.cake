@@ -5,9 +5,6 @@ var configuration   = Argument<string>("configuration", "Release");
 // GLOBAL VARIABLES
 ///////////////////////////////////////////////////////////////////////////////
 var isLocalBuild        = !AppVeyor.IsRunningOnAppVeyor;
-var sourcePath          = Directory("./src");
-var testsPath           = Directory("test");
-var samplesPath			= Directory("sample");
 var buildArtifacts      = Directory("./artifacts/packages");
 
 Task("Build")
@@ -24,11 +21,6 @@ Task("Build")
 Task("RunTests")
     .Does(() =>
 {
-	var settings = new DotNetCoreTestSettings{
-		NoBuild = true,
-		Configuration = "Release"
-	}; 
-	
 	DotNetCoreTest("./test/Sphiecoh.Microbus.Nancy.Tests/Sphiecoh.Microbus.Nancy.Tests.csproj");
 	
 });
