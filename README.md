@@ -1,3 +1,5 @@
+
+[![Build status](https://ci.appveyor.com/api/projects/status/1dkne7irva7vr8d8?svg=true)](https://ci.appveyor.com/project/sphiecoh/sphiecoh-microbus-nancy)
 # Sphiecoh.Microbus.Nancy
 A small library to with using NancyFx and [MicroBus](https://github.com/Lavinski/Enexure.MicroBus) mediator for .NET using the default Nancy container.
 ```
