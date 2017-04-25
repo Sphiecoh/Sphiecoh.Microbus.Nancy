@@ -12,9 +12,7 @@ Task("Build")
     .IsDependentOn("Restore")
     .Does(() =>
 {
-	DotNetBuild("Sphiecoh.Microbus.Nancy.sln", settings =>
-		settings.SetConfiguration("Release")
-        .WithTarget("Build")); 
+	DotNetCoreBuild("Sphiecoh.Microbus.Nancy.sln"); 
    
 });
 
